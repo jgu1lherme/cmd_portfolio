@@ -1,0 +1,129 @@
+@keyframes blink {
+  0% { opacity: 1; } 
+  50% { opacity: 0; } 
+  100% { opacity: 1; } 
+}
+
+body {
+  background-color: #464646; 
+  color: #cccccc; 
+  font-family: 'Courier New', Courier, monospace; 
+  margin: 0;
+  padding: 0;
+}
+
+.cmd-window {
+  background-color: #0c0c0c; 
+  border: 1px solid #6c6c6c; 
+  width: 80%; 
+  max-width: 800px; 
+  height: 600px; 
+  margin: 40px auto; 
+  overflow-y: auto; 
+  border-radius: 10px; 
+  font-size: 15px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cmd-header {
+  background-color: #202020;
+  color: #FFF; 
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  line-height: 0.9;
+}
+
+.cmd-icon {
+  width: 16px; 
+  height: 16px;
+  margin-right: 5px;
+  margin-bottom: -2px;
+}
+
+.cmd-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.cmd-controls span {
+  cursor: pointer; 
+}
+
+.minimize {
+  transform: translateY(-7px); 
+}
+
+.maximize, .close {
+  transform: none; 
+}
+
+.cmd-nav {
+  background-color: #0c0c0c; 
+  padding-top: 20px;
+  padding-left: 10px;
+  font-size: 16px; 
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cmd-nav a {
+  color: #cccccc; 
+  text-decoration: none; 
+  margin: 0 10px; 
+  font-weight: bold; 
+}
+
+.cmd-nav a:hover {
+  text-decoration: underline; 
+}
+
+.cmd-body {
+  padding: 20px;
+  margin: 0;
+  padding-top: 0px;
+  padding-left: 20px;
+  font-size: 15px; 
+}
+
+.cmd-body a {
+  color: #12ff1d; 
+  text-decoration: none;
+}
+
+.cmd-body a:hover {
+  text-decoration: underline; 
+}
+
+.cursor-underline {
+  display: inline-block; 
+  height: 4px; 
+  width: 9px; 
+  background: #fff;
+  position: relative; 
+  top: 0.3em;
+  animation: blink 1s steps(1) infinite; 
+}
+
+.preview-hidden {
+  display: none;
+  position: absolute;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 5px;
+  z-index: 1000;
+}
+
+#image-preview img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+#image-preview {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
