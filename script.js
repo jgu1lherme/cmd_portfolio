@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Função para minimizar a janela
     function minimizeWindow() {
         const cmdNav = document.querySelector('.cmd-nav');
         const cmdBody = document.querySelector('.cmd-body');
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Função para maximizar a janela
     function maximizeWindow() {
         const cmdNav = document.querySelector('.cmd-nav');
         const cmdBody = document.querySelector('.cmd-body');
@@ -29,12 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Função para fechar a janela
     function closeWindow() {
         window.location.href = "about:blank";
     }
 
-    // Função para preview de imagem
     const previewLinks = document.querySelectorAll('.preview-link');
 
     previewLinks.forEach(link => {
